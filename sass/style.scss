@@ -1,0 +1,50 @@
+.black {
+  color: black
+}
+
+.panel-default {
+
+}
+
+.radiator {
+  background-color: red;
+  border-width: 5px;
+  padding: 5px;
+  border-color: orange;
+}
+
+.ontext {
+  color: red;
+}
+
+.environment {
+  margin-top: 10px;
+  padding: 10px;
+  border: 3px solid black;
+}
+
+.inner-environment {
+  margin-top: 10px;
+  padding: 10px;
+  border: 3px solid black;
+  border: 3px double black;
+}
+
+.thermostat {
+  margin-top: 10px;
+  padding: 10px;
+  border: 3px solid black;
+  border: 3px dotted black;
+}
+
+.timer {
+  font-size: x-small;
+}
+
+.grooved {
+  border-style: groove;
+}
+
+.ridged {
+  border-style: ridge;
+}
