@@ -1,6 +1,4 @@
 var React = require('react');
-var Header = require('./header.jsx');
-var TopicList = require('./topic-list.jsx');
 var Environment = require('./environment.jsx');
 var Timer = require('./timer.jsx');
 

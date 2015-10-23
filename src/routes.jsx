@@ -5,8 +5,6 @@ var Router = ReactRouter.Router;
 var Route = ReactRouter.Route;
 
 var Main = require('./components/weather-main.jsx');
-var Topic = require('./components/topic.jsx');
-var ImageDetail = require('./components/image-detail.jsx');
 var Environment = require('./components/environment.jsx');
 var Timer = require('./components/timer.jsx');
 
