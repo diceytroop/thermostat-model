@@ -12,8 +12,7 @@ module.exports =
 (
   <Router history={new HashHistory}>
     <Route path="/" component={Environment}>
-      // <Route path="topics/:id" component={Topic} />
-      // <Route path="images/:id" component={ImageDetail} />
+      
     </Route>
   </Router>
 );

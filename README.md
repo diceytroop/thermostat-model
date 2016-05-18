@@ -1,7 +1,7 @@
 thermostat-model
 ===
 
-This is a little one-page demonstration of that most basic cybernetic system, the thermostat. There's really no interactivity, but you can watch as a small room in Fairbanks, Alaska is climate-controlled by a thermostat and radiator.
+This is a little one-page demonstration of that most basic cybernetic system, the thermostat. There's really no interactivity, but you can watch as a simulated small room in the real-life Fairbanks, Alaska is virtually climate-controlled by a thermostat and radiator.
 
 It relies on node/npm and gulp.
 
@@ -16,4 +16,3 @@ Then, in that folder
 And finally
 
 > gulp
-
