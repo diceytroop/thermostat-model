@@ -3,6 +3,7 @@ import {
 } from '../actions/building';
 
 export const default_state = {
+  temperature: 65,
   east: {
     in_thick: 3,
     height: 10,
