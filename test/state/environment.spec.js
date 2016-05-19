@@ -45,7 +45,7 @@ describe('Environment State', function() {
            setTimeout( function() {
                         expect(store.getActions())
                         .toEqual(expectedActions);
-                        done() }, 50);
+                        done() }, 20);
             intercept.done();
          });
 
@@ -73,13 +73,48 @@ describe('Environment State', function() {
         const store = mockStore({environment: default_state});
         store.dispatch(EnvironmentActions.setCityId(new_city_id));
         setTimeout( function() {
-          expect(store.getActions()).toEqual(expectedActions)
-          done();}, 50);
+          expect(store.getActions()).toEqual(expectedActions);
+          done();}, 20);
         intercept.done();
 
 
       });
 
+
+    });
+
+
+  });
+
+  describe('Environment reducer', function() {
+
+    it('initializes with the default state', function() {
+
+      expect(reducer(undefined, {})).toEqual(default_state);
+
+    });
+
+    it('handles SET_CITY_ID', function() {
+
+      expect(reducer(default_state, {
+        type: EnvironmentActions.SET_CITY_ID,
+        newCityId: '1001'
+      })).toEqual(Object.assign({}, default_state, {
+        city_id: '1001'
+      }))
+
+    });
+
+    it('handles GET_CITY_DATA_SUCCESS', function() {
+
+      expect(reducer(default_state, {
+        type: EnvironmentActions.GET_CITY_DATA+'_SUCCESS',
+        req: sample_response
+      })).toEqual( {
+        city_id: "5110302",
+        city_name: "Brooklyn",
+        temperature: "61.313000000000045"
+      });
 
     });
 

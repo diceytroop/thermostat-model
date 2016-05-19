@@ -22,7 +22,7 @@ describe('Building State', function() {
     // });
 
     describe('BuildingActions.changeWallProperty construction', function() {
-      it('should dispatch CHANGE_WALL_PROPERTY()', () => {
+      it('should dispatch CHANGE_WALL_PROPERTY', () => {
 
         const changeRequest = {
           wall: 'west',
