@@ -2,51 +2,45 @@ import {
   CHANGE_WALL_PROPERTY
 } from '../actions/building';
 
+
+// conductivity is in W/m K. currently set walls as oak material, roof as roof panel. TODO: implement materials lookup table for walls.
+
 export const default_state = {
   temperature: 65,
   east: {
     in_thick: 3,
     height: 10,
     length: 10,
-    width: 10,
-    inside_convection: 1.5,
-    outside_convection: 6,
-    wall_convection: 0.0318
+    conductivity: 0.117,
+    inside_convection: 1.5 // BTU/hr/ft2-degR
   },
   west: {
     in_thick: 3,
     height: 10,
     length: 10,
-    width: 10,
-    inside_convection: 1.5,
-    outside_convection: 6,
-    wall_convection: 0.0318
+    conductivity: 0.117,
+    inside_convection: 1.5 // BTU/hr/ft2-degR
   },
   north: {
     in_thick: 3,
     height: 10,
     length: 10,
-    width: 10,
-    inside_convection: 1.5,
-    outside_convection: 6,
-    wall_convection: 0.0318
+    conductivity: 0.117,
+    inside_convection: 1.5 // BTU/hr/ft2-degR
   },
   south: {
     in_thick: 3,
     height: 10,
     length: 10,
-    width: 10,
-    inside_convection: 1.5,
-    outside_convection: 6,
-    wall_convection: 0.0318
+    conductivity: 0.117,
+    inside_convection: 1.5 // BTU/hr/ft2-degR
   },
   roof: {
     in_thick: 3,
-    height: 10,
+    width: 10,
     length: 10,
-    inside_convection: 1.5,
-    outside_convection: 6,
-    wall_convection: 0.0318
+    conductivity: 0.84,
+    inside_convection: 1.5 // BTU/hr/ft2-degR
   }
 }
 

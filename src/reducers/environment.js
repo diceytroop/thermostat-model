@@ -3,7 +3,8 @@ import { SET_CITY_ID, GET_CITY_DATA } from '../actions/environment';
 export const default_state = {
   city_id: "5110302",
   city_name: "Brooklyn",
-  temperature: ""
+  temperature: "",
+  outside_convection: 6 // Btu/h-ft2-°R
 }
 
 export default function environment ( state = default_state, action ) {
