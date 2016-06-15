@@ -10,6 +10,7 @@
   "dependencies": {
     "babel": "^5.8.21",
     "browserify": "^9.0.3",
+    "chai": "^3.5.0",
     "expect": "^1.20.1",
     "gulp": "^3.8.11",
     "gulp-concat": "^2.5.2",

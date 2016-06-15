@@ -2,7 +2,7 @@ import { APPLY_THERMODYNAMICS } from '../actions/physics';
 
 export const default_state = {
 
-  last_applied: new Date()
+  last_applied: Date.parse(new Date())
 
 }
 

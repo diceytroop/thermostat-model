@@ -113,7 +113,8 @@ describe('Environment State', function() {
       })).toEqual( {
         city_id: "5110302",
         city_name: "Brooklyn",
-        temperature: "61.313000000000045"
+        outside_convection: 6,
+        temperature: 61.313000000000045
       });
 
     });

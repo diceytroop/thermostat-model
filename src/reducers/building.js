@@ -11,7 +11,7 @@ export const default_state = {
     in_thick: 3,
     height: 10,
     length: 10,
-    conductivity: 0.117,
+    conductivity: 0.117, // W/m K/C.
     inside_convection: 1.5 // BTU/hr/ft2-degR
   },
   west: {
@@ -37,7 +37,7 @@ export const default_state = {
   },
   roof: {
     in_thick: 3,
-    width: 10,
+    height: 10,
     length: 10,
     conductivity: 0.84,
     inside_convection: 1.5 // BTU/hr/ft2-degR
