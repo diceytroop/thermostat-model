@@ -1,18 +1,22 @@
-var React = require('react');
-var ReactRouter = require('react-router');
-var HashHistory = require('react-router/lib/hashhistory');
-var Router = ReactRouter.Router;
-var Route = ReactRouter.Route;
+import React from 'react';
+import { Router, Route, Provider } from 'react-router';
+import HashHistory from 'react-router/lib/hashhistory';
 
-var Main = require('./components/weather-main.jsx');
-var Environment = require('./components/environment.jsx');
-var Timer = require('./components/timer.jsx');
+import { createStore } from 'redux';
+import configureStore from './store/configureStore.js';
+import ReactDOM from 'react-dom';
 
-module.exports =
-(
-  <Router history={new HashHistory}>
-    <Route path="/" component={Environment}>
-      
-    </Route>
-  </Router>
+import App from './containers/App.jsx';
+console.log(App);
+
+var store = createStore(configureStore);
+
+export default ReactDOM.render (
+  <Provider store={store}>
+    <Router history={HashHistory}>
+      <Route path="/" component={App}>
+
+      </Route>
+    </Router>
+  </Provider>
 );

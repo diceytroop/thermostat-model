@@ -2,6 +2,7 @@ var gulp = require('gulp');
 var gutil = require('gulp-util');
 var source = require('vinyl-source-stream');
 var browserify = require('browserify');
+var babelify = require('babelify');
 var watchify = require('watchify');
 var reactify = require('reactify');
 var notifier = require('node-notifier');
@@ -28,13 +29,15 @@ var notify = function(error) {
   if(error.lineNumber) {
     message += '\nOn Line: ' + error.lineNumber;
   }
-
+  console.log(error);
   notifier.notify({title: title, message: message});
 };
 
 var bundler = watchify(browserify({
   entries: ['./src/app.jsx'],
-  transform: [reactify],
+  transform: [babelify.configure({
+    presets: ["stage-2", "es2015", "react"]
+  })],
   extensions: ['.jsx'],
   debug: true,
   cache: {},

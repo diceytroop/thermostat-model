@@ -1,5 +1,5 @@
 import React from 'react';
-import addons from 'react/addons';
+
 import { expect } from 'chai';
 import expect_alt from 'expect';
 import _ from 'underscore';
@@ -260,7 +260,7 @@ describe('Physics State', function() {
       expect_alt(reducer({ last_applied: Date.parse(date) },
           { type: PhysicsActions.APPLY_THERMODYNAMICS,
             newInsideTemp: 72,
-            msSinceUpdate: 60000 })).toEqual({ last_applied: Date.parse(date + 60000) });
+            msSinceUpdate: 60000 })).toEqual({ last_applied: Date.parse(date) + 60000 });
 
     });
 

@@ -2,7 +2,7 @@ import _ from 'underscore';
 import { MEASURE_TEMP } from './thermostat';
 
 export const APPLY_THERMODYNAMICS = 'APPLY_THERMODYNAMICS';
-
+export const SET_BASE_TIME = 'SET_BASE_TIME';
 
 // applyThermodynamics (null) -> side effects
 // This function dispatches a series of actions:
@@ -33,16 +33,14 @@ export function applyThermodynamics() {
         msSinceUpdate: ms_since_update
       });
     }
-
-    // dispatch({
-    //   type: MEASURE_TEMP
-    // });
-
-
-
-
   }
+}
 
+export function setBaseTime() {
+
+  return {
+    type: SET_BASE_TIME
+  }
 
 }
 

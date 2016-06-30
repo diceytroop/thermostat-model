@@ -1,5 +1,5 @@
 import React from 'react';
-import addons from 'react/addons';
+
 import expect from 'expect';
 import _ from 'underscore';
 
