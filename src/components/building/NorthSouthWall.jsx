@@ -8,7 +8,7 @@ class NorthSouthWall extends Component {
     this.state = {
       mounted: false
     };
-    this.findTitlePosition = this.findTitlePosition.bind(this);
+    // this.findTitlePosition = this.findTitlePosition.bind(this);
   }
 
   componentDidMount() {
@@ -21,29 +21,24 @@ class NorthSouthWall extends Component {
 
   findTitlePosition() {
 
-    var { bottom, height, left, right, top, width } = this.state.rect
-    console.log(this.state.rect);
-    console.log(bottom);
-    var x = (left+((right - left)/2))-35;
-    var align;
-    var y;
-
+    var { width } = this.state.rect
+    var x = (width/2 - 30).toString(), y = ""
     if (this.props.wall_name === "north") {
-      y = top - 30;
+      y = "-30";
     }
     else {
-      y = bottom + 5;
+      y = "10";
     }
     return [x, y];
   }
 
   generateStyle() {
     var [ x, y ] = this.findTitlePosition();
-    console.log(x, y);
-    return  {
+    return {
       top: y,
       left: x
-    };
+    }
+
   }
 
   renderWallNameAndInfoButton() {

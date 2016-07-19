@@ -14,7 +14,7 @@ class Roof extends Component {
     this.state = {
       mounted: false
     };
-    this.findTitlePosition = this.findTitlePosition.bind(this);
+    // this.findTitlePosition = this.findTitlePosition.bind(this);
   }
 
   componentDidMount() {
@@ -24,25 +24,26 @@ class Roof extends Component {
       mounted: true
     });
   }
-
-  findTitlePosition() {
-
-    var { bottom, height, left, right, top, width } = this.state.rect
-    console.log(this.state.rect);
-    console.log(bottom);
-    var x = (left+((right - left)/2))-17;
-    var align;
-    var y = top - 30;
-
-    return [x, y];
-  }
+  // Deprecated because switching to relative positioning
+  // findTitlePosition() {
+  //
+  //   var { bottom, height, left, right, top, width } = this.state.rect
+  //   console.log(this.state.rect);
+  //   console.log(bottom);
+  //   var x = (left+((right - left)/2))-17;
+  //   var align;
+  //   var y = top - 30;
+  //
+  //   return [x, y];
+  // }
 
   generateStyle() {
-    var [ x, y ] = this.findTitlePosition();
-    console.log(x, y);
+    // var [ x, y ] = this.findTitlePosition();
+
     return  {
-      top: y,
-      left: x
+      top: "-30",
+      left: "50%",
+      width: "50px"
     };
   }
 

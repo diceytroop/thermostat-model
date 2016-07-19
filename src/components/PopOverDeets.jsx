@@ -108,10 +108,10 @@ class PopOverDeets extends Component {
   }
 
   calculatePosition() {
-    var { bottom, left, width } = this.state.rect;
+    var { top, bottom, left, width } = this.state.rect;
     let style = {
-      top: bottom,
-      left: left + (width/2)
+      top: "15px",
+      left: (width/2)
     }
     return style;
   }

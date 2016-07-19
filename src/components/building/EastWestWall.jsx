@@ -9,7 +9,7 @@ class EastWestWall extends Component {
     this.state = {
       mounted: false
     };
-    this.findTitlePosition = this.findTitlePosition.bind(this);
+    // this.findTitlePosition = this.findTitlePosition.bind(this);
     this.setRect = this.setRect.bind(this);
   }
 
@@ -25,31 +25,41 @@ class EastWestWall extends Component {
   }
 
 
-  findTitlePosition() {
-
-    var { bottom, height, left, right, top, width } = this.state.rect
-    console.log(this.state.rect);
-    console.log(bottom);
-    var y = top+((bottom - top)/2);
-    var align;
-    var x;
-
-    if (this.props.wall_name === "west") {
-      x = left - 85;
-    }
-    else {
-      x = right + 20;
-    }
-    return [x, y];
-  }
+  // findTitlePosition() {
+  //
+  //   var { bottom, height, left, right, top, width } = this.state.rect
+  //   console.log(this.state.rect);
+  //   console.log(bottom);
+  //   var y = top+((bottom - top)/2);
+  //   var align;
+  //   var x;
+  //
+  //   if (this.props.wall_name === "west") {
+  //     x = left - 85;
+  //   }
+  //   else {
+  //     x = right + 20;
+  //   }
+  //   return [x, y];
+  // }
 
   generateStyle() {
-    var [ x, y ] = this.findTitlePosition();
+    // var [ x, y ] = this.findTitlePosition();
+    if (this.props.wall_name == "west") {
+      return  {
+        top: "50%",
+        left: "-85px",
+        width: "85px"
+      };
+    } else {
+      return {
+        top: "50%",
+        left: "10px",
+        width: "80px"
+      }
+    }
     console.log(x, y);
-    return  {
-      top: y,
-      left: x
-    };
+
   }
 
   renderWallNameAndInfoButton() {
